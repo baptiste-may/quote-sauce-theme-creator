@@ -38,4 +38,5 @@
     </div>
 </body>
 <script src="creator.js"></script>
+<script src="download.js"></script>
 </html>

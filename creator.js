@@ -61,7 +61,3 @@ function removeAnswer(nb) {
     document.getElementById("answer-" + nb + "-" + answers[nb-1]).remove();
     answers[nb-1]--;
 }
-
-function download() {
-    window.alert("WIP")
-}
