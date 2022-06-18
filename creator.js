@@ -49,11 +49,17 @@ function removeQuote() {
 }
 
 function addAnswer(nb) {
-
+    answers[nb-1]++;
+    const answer = document.createElement("input");
+    answer.id = ("answer-" + nb + "-" + answers[nb-1]);
+    answer.placeholder = ("Réponse " + answers[nb-1]);
+    document.getElementById("answers-" + nb).insertBefore(answer, document.getElementById("addAnswer-" + nb))
 }
 
 function removeAnswer(nb) {
-
+    if (answers[nb-1] <= 1) return;
+    document.getElementById("answer-" + nb + "-" + answers[nb-1]).remove();
+    answers[nb-1]--;
 }
 
 function download() {
