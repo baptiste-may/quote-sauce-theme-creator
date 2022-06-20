@@ -2,18 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/555402600640413713/983313129972830278/Quote_Sauce_.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Quote Sauce Theme Creator</title>
 </head>
 <body>
-    <h1>Quote Sauce Theme Creator</h1>
+    <div class="header">
+        <img onclick="window.location.href = 'https://github.com/DjRedstone/quote-sauce';" src="logo.png">
+        <h1>Quote Sauce Theme Creator</h1>
+    </div>
+    <br>
     <div id="creator">
         <div id="infos">
-            <input id="name" placeholder="Nom">
+            <input id="name" placeholder="Nom du thème">
         </div>
         <div id="questions">
             <div id="Q-1">
-                <p>Citation 1</p>
-                <input id="quote-1" placeholder="Citation">
+                <hr class="betweenQuote">
+                <input id="quote-1" placeholder="Citation 1">
+                <hr style="border: none;">
                 <div id="answers-1">
                     <input id="answer-1-1" placeholder="Réponse 1">
                     <button onclick="addAnswer(1)" id="addAnswer-1">+</button>
@@ -21,8 +29,9 @@
                 </div>
             </div>
             <div id="Q-2">
-                <p>Citation 2</p>
-                <input id="quote-2" placeholder="Citation">
+                <hr class="betweenQuote">
+                <input id="quote-2" placeholder="Citation 2">
+                <hr style="border: none;">
                 <div id="answers-2">
                     <input id="answer-2-1" placeholder="Réponse 1">
                     <button onclick="addAnswer(2)" id="addAnswer-2">+</button>
@@ -30,11 +39,13 @@
                 </div>
             </div>
         </div>
-        <br>
-        <button onclick="addQuote()">+</button>
-        <button onclick="removeQuote()">-</button>
-        <br><br>
-        <button onclick="download()" id="download">Télécharger</button>
+        <div id="other">
+            <hr class="betweenQuote">
+            <button onclick="addQuote()">+</button>
+            <button onclick="removeQuote()">-</button>
+            <br><br>
+            <button onclick="download()" id="download">Télécharger</button>
+        </div>
     </div>
 </body>
 <script src="creator.js"></script>

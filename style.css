@@ -1,0 +1,75 @@
+body {
+    background-color: #FB9318;
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    display: flex;
+    margin: auto;
+    max-width: 750px;
+    max-height: 100px;
+    background-color: rgb(255, 255, 255, 0.6);
+    border: 5px solid white;
+    padding: 1% 1%;
+    border-radius: 25px;
+    text-align: center;
+}
+.header img {
+    max-height: 100px;
+    cursor: pointer;
+}
+.header h1 {
+    max-height: 100px;
+    padding: 1% 3%;
+    color: #FB9318;
+}
+#creator {
+    display: grid;
+    margin: auto;
+    max-width: 1000px;
+    background-color: rgb(255, 255, 255, 0.6);
+    border: 5px solid white;
+    padding: 1% 1%;
+    border-radius: 25px;
+    text-align: center;
+}
+#questions div input {
+    font-style: italic;
+}
+#questions div div input {
+    font-style: normal;
+}
+input {
+    font-size: 200%;
+    color: lightslategray;
+    padding: 0.5% 1%;
+    background: none;
+    border: 3px solid white;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+input:hover, input:focus {
+    padding: 1% 3%;
+}
+#Q-1 hr {
+    border: solid white;
+}
+.betweenQuote {
+    width: 100%;
+    border: dotted white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+button {
+    max-width: 250px;
+    font-size: 200%;
+    color: lightslategray;
+    background: none;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+button:hover {
+    max-width: 300px;
+    padding: 0.5% 1%;
+}

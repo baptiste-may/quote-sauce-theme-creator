@@ -8,14 +8,18 @@ function addQuote() {
     quote.id = ("Q-" + quotes);
     document.getElementById("questions").appendChild(quote);
 
-    const p = document.createElement("p");
-    p.textContent = ("Citation " + quotes);
-    quote.appendChild(p);
+    const hr = document.createElement("hr");
+    hr.className = "betweenQuote";
+    quote.appendChild(hr);
 
     const input = document.createElement("input");
     input.id = ("quote-" + quotes);
-    input.placeholder = "Citation";
+    input.placeholder = ("Citation " + quotes);
     quote.appendChild(input);
+
+    const hr2 = document.createElement("hr");
+    hr2.style = "border: none;";
+    quote.appendChild(hr2);
 
     const div = document.createElement("div");
     div.id = ("answers-" + quotes)
@@ -32,12 +36,14 @@ function addQuote() {
     addButton.textContent = "+";
     addButton.setAttribute("onclick", "addAnswer(" + quotes + ")")
     addButton.id = ("addAnswer-" + quotes);
+    div.appendChild(document.createTextNode(" "));
     div.appendChild(addButton);
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "-";
     removeButton.setAttribute("onclick", "removeAnswer(" + quotes + ")")
     removeButton.id = ("removeAnswer-" + quotes);
+    div.appendChild(document.createTextNode(" "));
     div.appendChild(removeButton);
 }
 
@@ -54,6 +60,7 @@ function addAnswer(nb) {
     answer.id = ("answer-" + nb + "-" + answers[nb-1]);
     answer.placeholder = ("Réponse " + answers[nb-1]);
     document.getElementById("answers-" + nb).insertBefore(answer, document.getElementById("addAnswer-" + nb))
+    document.getElementById("answers-" + nb).insertBefore(document.createTextNode(" "), document.getElementById("addAnswer-" + nb))
 }
 
 function removeAnswer(nb) {
